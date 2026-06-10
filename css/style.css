@@ -160,7 +160,8 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); font-weight: 700; }
 .marquee__track {
   display: flex; gap: 3rem; width: max-content;
   animation: marquee 28s linear infinite;
-  font-family: var(--font-display); font-style: italic; font-size: 1.15rem; white-space: nowrap;
+  font-family: var(--font-body); font-weight: 700; font-size: .95rem;
+  text-transform: uppercase; letter-spacing: .22em; white-space: nowrap;
 }
 .marquee__track span { display: inline-flex; align-items: center; gap: 3rem; }
 .marquee__track .dot { font-style: normal; color: var(--sand); }
