@@ -258,6 +258,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); font-weight: 400; }
 .chalk-rule h3 { color: var(--chalk-text); font-family: var(--font-hand); font-size: 1.6rem; margin-bottom: .35rem; }
 .chalk-rule p { color: rgba(245, 241, 230, .82); margin: 0; font-size: 1rem; }
 @media (max-width: 820px) { .chalk-rules { grid-template-columns: 1fr; } }
+@media (max-width: 820px) { .chalkboard h2 .underline { border-bottom: none; padding-bottom: 0; } }
 
 /* ---------- Galerie / mosaïque ---------- */
 .mosaic {
