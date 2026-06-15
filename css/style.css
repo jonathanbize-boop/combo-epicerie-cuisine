@@ -248,7 +248,8 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); font-weight: 400; }
               radial-gradient(ellipse at 75% 80%, rgba(255,255,255,.05), transparent 50%);
 }
 .chalkboard h2 { color: var(--chalk-text); font-family: var(--font-hand); font-size: clamp(2.2rem, 4.5vw, 3.2rem); transform: rotate(-1deg); }
-.chalkboard h2 .underline { text-decoration: underline wavy var(--terracotta-soft) 3px; text-underline-offset: 8px; }
+.chalkboard h2 .underline { position: relative; display: inline; }
+.chalkboard h2 .underline::after { content: ''; position: absolute; left: -2px; right: -2px; bottom: -6px; height: 3px; background: var(--terracotta-soft); border-radius: 2px; transform: rotate(-0.6deg) skewX(-2deg); }
 .chalk-rules { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.5rem, 3vw, 2.5rem); margin-top: 2.5rem; }
 .chalk-rule { position: relative; padding-top: .5rem; }
 .chalk-rule .num {
