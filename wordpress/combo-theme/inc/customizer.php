@@ -87,7 +87,7 @@ function combo_defaults() {
 		'ep_marquee'      => "Épices & condiments • Vins de vignerons • Chocolats d'artisans • Vrac • Produits bio & locaux • Saveurs d'Asie, d'Orient & d'ailleurs •",
 		'ep_intro_title'  => 'Le tour du monde en quelques rayons',
 		'ep_intro_lead'   => "Chez COMBO, chaque produit a une histoire. Tahini libanais, sauces asiatiques introuvables ailleurs, épices qui embaument, conserves de la mer, douceurs orientales… et juste à côté, le meilleur de la Drôme : chocolats d'artisans, tisanes, miels et jus de fruits locaux.",
-		'ep_intro_text'   => "Nos ardoises manuscrites vous racontent chaque trouvaille : d'où elle vient, comment la cuisiner, avec quoi la marier. Et si vous hésitez, demandez-nous — on adore partager nos recettes !",
+		'ep_intro_text'   => "Nos ardoises vous racontent chaque trouvaille : d'où elle vient, comment la cuisiner, avec quoi la marier. Et si vous hésitez, demandez-nous — on adore partager nos recettes !",
 		'ep_intro_sticker' => 'Conseils inclus !',
 		'ep_cards_title'  => 'Trois bonnes raisons de pousser la porte <span class="hand hand--olive">(au moins !)</span>',
 		'ep_c1_tag'       => 'Épicerie fine',
