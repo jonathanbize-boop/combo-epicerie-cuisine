@@ -4,8 +4,9 @@
     {
       "name": "combo-site",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8765"],
-      "port": 8765
+      "runtimeArgs": ["-c", "import http.server,socketserver,os; port=int(os.environ.get('PORT','8765')); socketserver.TCPServer.allow_reuse_address=True; socketserver.TCPServer(('',port), http.server.SimpleHTTPRequestHandler).serve_forever()"],
+      "port": 8765,
+      "autoPort": true
     }
   ]
 }
