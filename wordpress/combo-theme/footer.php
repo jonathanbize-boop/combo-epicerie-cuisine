@@ -42,12 +42,14 @@ $mentions = get_page_by_path( 'mentions-legales' );
 				</ul>
 			</div>
 		</div>
-		<div class="footer-bottom">
+	</div>
+	<div class="footer-illustration"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/illustration-wok-epicerie.png" alt="" loading="lazy" width="1920" height="743"></div>
+	<div class="footer-bottom">
+		<div class="container">
 			<p>© <?php echo esc_html( gmdate( 'Y' ) ); ?> COMBO Épicerie - Cuisine · Le Poët-Laval</p>
 			<p><?php if ( $mentions ) : ?><a href="<?php echo esc_url( get_permalink( $mentions ) ); ?>">Mentions légales</a> · <?php endif; ?>L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
 		</div>
 	</div>
-	<div class="footer-illustration"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/illustration-wok-epicerie.png" alt="" loading="lazy" width="1920" height="743"></div>
 </footer>
 <?php wp_footer(); ?>
 </body>
