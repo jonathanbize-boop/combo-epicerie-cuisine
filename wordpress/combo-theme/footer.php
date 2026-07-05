@@ -5,6 +5,7 @@
 $mentions = get_page_by_path( 'mentions-legales' );
 ?>
 <footer class="site-footer">
+	<div class="footer-illustration"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/illustration-wok-epicerie.png" alt="" loading="lazy" width="1920" height="743"></div>
 	<div class="container">
 		<div class="footer-grid">
 			<div class="footer-logo">
