@@ -354,6 +354,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); font-weight: 400; }
 .info-card li { display: flex; justify-content: space-between; gap: 1rem; border-bottom: 1px dashed rgba(51,35,21,.15); padding-bottom: .45rem; }
 .info-card li span:last-child { font-weight: 700; white-space: nowrap; }
 .info-card a { font-weight: 700; }
+.info-card--ete { grid-column: 1 / -1; border-top-color: var(--olive) !important; }
 @media (max-width: 880px) { .info-grid { grid-template-columns: 1fr; } }
 
 /* ---------- Bande Instagram ---------- */

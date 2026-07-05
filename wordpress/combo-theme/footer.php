@@ -28,6 +28,7 @@ $mentions = get_page_by_path( 'mentions-legales' );
 					<li><?php combo_text( 'hours_f2' ); ?></li>
 					<li><?php combo_text( 'hours_f3' ); ?></li>
 					<li><?php combo_text( 'hours_f4' ); ?></li>
+					<li><?php combo_text( 'hours_f5' ); ?></li>
 				</ul>
 			</div>
 			<div>

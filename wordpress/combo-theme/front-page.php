@@ -120,22 +120,27 @@ $co_url = combo_tpl_url( 'contact' );
 			</div>
 			<div class="info-grid">
 				<div class="info-card reveal">
-					<h3><?php echo combo_icon( 'clock' ); // phpcs:ignore ?>Horaires épicerie-café</h3>
+					<h3><?php echo combo_icon( 'clock' ); // phpcs:ignore ?>Horaires hors période estivale</h3>
 					<ul>
-						<li><span>Mardi, jeudi, samedi</span><span><?php combo_text( 'h_mar' ); ?></span></li>
-						<li><span>Mercredi, vendredi</span><span><?php combo_text( 'h_mer' ); ?></span></li>
+						<li><span>Mardi, mercredi, vendredi</span><span><?php combo_text( 'h_mar' ); ?></span></li>
+						<li><span>Jeudi, samedi</span><span><?php combo_text( 'h_jeu' ); ?></span></li>
 						<li><span>Dimanche &amp; lundi</span><span><?php combo_text( 'h_dim' ); ?></span></li>
 					</ul>
 				</div>
 				<div class="info-card reveal reveal-delay-1">
 					<h3><?php echo combo_icon( 'table' ); // phpcs:ignore ?>La cantine</h3>
 					<p><?php combo_text( 'cantine_txt' ); ?></p>
-					<p>Menu unique fait maison qui change régulièrement — suivez-le sur <a href="<?php echo esc_url( combo_get( 'instagram' ) ); ?>" rel="noopener" target="_blank">Instagram</a> !</p>
+					<p>Menu unique fait maison qui change tous les jours. Laissez-vous surprendre&nbsp;!</p>
 				</div>
 				<div class="info-card reveal reveal-delay-2">
 					<h3><?php echo combo_icon( 'pin' ); // phpcs:ignore ?>Nous trouver</h3>
 					<p><?php combo_text( 'addr_l1' ); ?><br><?php combo_text( 'addr_l2' ); ?><br><?php combo_text( 'addr_city' ); ?></p>
 					<p><a href="<?php echo esc_attr( combo_phone_href() ); ?>"><?php combo_text( 'phone' ); ?></a></p>
+				</div>
+				<div class="info-card info-card--ete reveal">
+					<h3><?php echo combo_icon( 'clock' ); // phpcs:ignore ?><?php combo_text( 'ete_title' ); ?></h3>
+					<p><?php combo_text( 'ete_l1' ); ?></p>
+					<p><?php combo_text( 'ete_l2' ); ?></p>
 				</div>
 			</div>
 		</div>
@@ -146,7 +151,7 @@ $co_url = combo_tpl_url( 'contact' );
 			<div class="section__head reveal">
 				<p class="eyebrow">En ce moment chez COMBO</p>
 				<h2 id="insta-title"><?php combo_text( 'insta_title' ); ?></h2>
-				<p>Nouveautés, plats du jour et coups de cœur : tout se passe sur <a class="insta-link" href="<?php echo esc_url( combo_get( 'instagram' ) ); ?>" rel="noopener" target="_blank"><?php combo_text( 'insta_handle' ); ?></a></p>
+				<p>Nouveautés, événements et coups de cœur : tout se passe sur <a class="insta-link" href="<?php echo esc_url( combo_get( 'instagram' ) ); ?>" rel="noopener" target="_blank"><?php combo_text( 'insta_handle' ); ?></a></p>
 			</div>
 			<div class="insta-strip reveal">
 				<?php for ( $i = 1; $i <= 6; $i++ ) : ?>

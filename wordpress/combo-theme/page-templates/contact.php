@@ -40,7 +40,7 @@ $maps_q = rawurlencode( combo_get( 'maps_q' ) );
 					<p><?php combo_text( 'co_parking' ); ?></p>
 				</div>
 				<div class="info-card reveal reveal-delay-1">
-					<h3><?php echo combo_icon( 'clock' ); // phpcs:ignore ?>Horaires</h3>
+					<h3><?php echo combo_icon( 'clock' ); // phpcs:ignore ?>Horaires hors période estivale</h3>
 					<ul>
 						<li><span>Mardi</span><span><?php combo_text( 'h_mar' ); ?></span></li>
 						<li><span>Mercredi</span><span><?php combo_text( 'h_mer' ); ?></span></li>
@@ -59,6 +59,11 @@ $maps_q = rawurlencode( combo_get( 'maps_q' ) );
 						<?php echo combo_icon( 'instagram' ); // phpcs:ignore ?>
 						<?php combo_text( 'insta_handle' ); ?></a></p>
 					<p><a href="<?php echo esc_url( combo_get( 'google_url' ) ); ?>" rel="noopener" target="_blank">Voir notre fiche Google</a></p>
+				</div>
+				<div class="info-card info-card--ete reveal">
+					<h3><?php echo combo_icon( 'clock' ); // phpcs:ignore ?><?php combo_text( 'ete_title' ); ?></h3>
+					<p><?php combo_text( 'ete_l1' ); ?></p>
+					<p><?php combo_text( 'ete_l2' ); ?></p>
 				</div>
 			</div>
 		</div>

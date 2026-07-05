@@ -72,7 +72,7 @@ $captions = array( 'Bœuf mariné, herbes & riz safrané', 'Maquereau laqué, sa
 	<section class="section section--sand" aria-labelledby="bar-title">
 		<div class="container split split--reverse">
 			<div class="split__media reveal">
-				<img src="<?php echo combo_img_url( 'cu_bar_img' ); ?>" alt="Le bar de COMBO et son ardoise de cocktails" loading="lazy">
+				<img src="<?php echo combo_img_url( 'cu_bar_img' ); ?>" alt="Le bar de COMBO et son ardoise de boissons" loading="lazy">
 				<span class="sticker"><?php combo_text( 'cu_bar_sticker' ); ?></span>
 			</div>
 			<div class="reveal reveal-delay-1">
