@@ -12,7 +12,7 @@ $captions = array( 'Les rayons épicerie', 'Bières & limonades artisanales', "C
 <main id="main">
 
 	<section class="page-hero">
-		<img class="page-hero__bg" src="<?php echo combo_img_url( 'ep_hero_img' ); ?>" alt="" loading="eager" fetchpriority="high">
+		<img class="page-hero__bg page-hero__bg--top" src="<?php echo combo_img_url( 'ep_hero_img' ); ?>" alt="" loading="eager" fetchpriority="high">
 		<div class="container">
 			<nav class="breadcrumb" aria-label="Fil d'Ariane">
 				<ol>
