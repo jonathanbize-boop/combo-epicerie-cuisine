@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 function combo_defaults() {
 	return array(
 		// Coordonnées
-		'phone'           => '09 60 09 90 73',
+		'phone'           => '04 75 54 57 58',
 		'addr_l1'         => '25 Route de la Faïencerie',
 		'addr_l2'         => "L'Usine",
 		'addr_city'       => '26160 Le Poët-Laval',

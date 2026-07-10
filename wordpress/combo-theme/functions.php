@@ -52,7 +52,7 @@ function combo_create_pages() {
 		$content = '';
 		if ( 'mentions-legales' === $page['slug'] ) {
 			$content = "<!-- wp:heading --><h2>Éditeur du site</h2><!-- /wp:heading -->"
-				. "<!-- wp:paragraph --><p>COMBO Épicerie - Cuisine<br>25 Route de la Faïencerie, L'Usine, 26160 Le Poët-Laval<br>Téléphone : 09 60 09 90 73<br><em>[À compléter : forme juridique, SIRET, TVA, directeur de la publication]</em></p><!-- /wp:paragraph -->"
+				. "<!-- wp:paragraph --><p>COMBO Épicerie - Cuisine<br>25 Route de la Faïencerie, L'Usine, 26160 Le Poët-Laval<br>Téléphone : 04 75 54 57 58<br><em>[À compléter : forme juridique, SIRET, TVA, directeur de la publication]</em></p><!-- /wp:paragraph -->"
 				. "<!-- wp:heading --><h2>Hébergement</h2><!-- /wp:heading -->"
 				. "<!-- wp:paragraph --><p><em>[À compléter : nom, adresse et téléphone de l'hébergeur]</em></p><!-- /wp:paragraph -->"
 				. "<!-- wp:heading --><h2>Propriété intellectuelle</h2><!-- /wp:heading -->"
@@ -82,7 +82,7 @@ function combo_meta_description() {
 	} elseif ( is_page_template( 'page-templates/cuisine.php' ) ) {
 		$desc = "La cantine COMBO au Poët-Laval, près de Dieulefit : cuisine du monde 100 % fait maison servie le midi du mardi au samedi. Commande au comptoir, bar convivial, bonne ambiance.";
 	} elseif ( is_page_template( 'page-templates/contact.php' ) ) {
-		$desc = "Retrouvez COMBO au 25 Route de la Faïencerie, à l'Usine, 26160 Le Poët-Laval, à 5 minutes de Dieulefit. Horaires, téléphone 09 60 09 90 73 et plan d'accès.";
+		$desc = "Retrouvez COMBO au 25 Route de la Faïencerie, à l'Usine, 26160 Le Poët-Laval, à 5 minutes de Dieulefit. Horaires, téléphone 04 75 54 57 58 et plan d'accès.";
 	}
 	if ( $desc ) {
 		echo '<meta name="description" content="' . esc_attr( $desc ) . '">' . "\n";
