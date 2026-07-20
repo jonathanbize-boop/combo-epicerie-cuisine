@@ -3,7 +3,7 @@ Theme Name: COMBO Epicerie Cuisine
 Theme URI: https://github.com/jonathanbize-boop/combo-epicerie-cuisine
 Author: Jonathan Bize
 Description: Theme sur mesure pour COMBO Epicerie - Cuisine (Le Poet-Laval). Design terracotta/olive, contenus editables via Apparence > Personnaliser, sans plugin.
-Version: 1.2.0
+Version: 1.2.1
 Requires at least: 6.3
 Requires PHP: 7.4
 License: Proprietaire
@@ -38,6 +38,7 @@ Text Domain: combo
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body: 'Karla', 'Segoe UI', sans-serif;
   --font-hand: 'Caveat', cursive;
+  --font-graffiti: 'Boogaloo', cursive;
   --container: 1180px;
   --transition: .25s ease;
 }
@@ -69,10 +70,11 @@ a:focus-visible, button:focus-visible {
   border-radius: 4px;
 }
 
-h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; color: var(--ink); margin: 0 0 .5em; }
-h1 { font-size: clamp(2.2rem, 5.2vw, 4rem); font-weight: 800; }
-h2 { font-size: clamp(1.8rem, 3.6vw, 2.7rem); font-weight: 700; }
-h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); font-weight: 700; }
+h1, h2, h3 { font-family: var(--font-graffiti); line-height: 1.15; color: var(--ink); margin: 0 0 .5em; }
+h1 { font-size: clamp(2.2rem, 5.2vw, 4rem); font-weight: 400; }
+h2 { font-size: clamp(1.8rem, 3.6vw, 2.7rem); font-weight: 400; }
+h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); font-weight: 400; }
+.chalkboard h2 { font-family: var(--font-display); font-weight: 700; }
 
 .container { max-width: var(--container); margin-inline: auto; padding-inline: clamp(1.25rem, 4vw, 2.5rem); }
 
