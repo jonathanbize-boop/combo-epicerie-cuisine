@@ -3,7 +3,8 @@
    Charte : terracotta du logo, olive des illustrations, crème chaleureuse
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500;1,700&family=Karla:wght@300;400;500;600;700&family=Caveat:wght@500;700&family=Boogaloo&display=swap');
+/* Polices chargées via <link> dans le <head> (voir header.php / enqueue) —
+   pas d'@import ici : il crée une chaîne de requêtes bloquante pénalisante sur mobile. */
 
 :root {
   --terracotta: #C1451B;

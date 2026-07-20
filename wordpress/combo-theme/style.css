@@ -15,7 +15,8 @@ Text Domain: combo
    Charte : terracotta du logo, olive des illustrations, crÃ¨me chaleureuse
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500;1,700&family=Karla:wght@300;400;500;600;700&family=Caveat:wght@500;700&display=swap');
+/* Polices chargées via wp_enqueue_style dans functions.php (combo-fonts) —
+   pas d'@import ici : chaîne de requêtes bloquante pénalisante sur mobile. */
 
 :root {
   --terracotta: #C1451B;
