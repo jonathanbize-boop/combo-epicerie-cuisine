@@ -21,10 +21,8 @@ add_action( 'after_setup_theme', 'combo_setup' );
 /* ---------- Styles & scripts ---------- */
 function combo_assets() {
 	$version = wp_get_theme()->get( 'Version' );
-	// Polices Google chargées en <link> (non bloquant, en parallèle) plutôt qu'en @import CSS.
-	// Seules les graisses réellement utilisées sont demandées. Version null = pas de ?ver (URL Google intacte).
-	wp_enqueue_style( 'combo-fonts', 'https://fonts.googleapis.com/css2?family=Boogaloo&family=Caveat:wght@500;700&family=Karla:wght@400;600;700&family=Playfair+Display:ital,wght@1,400;1,500&display=swap', array(), null );
-	wp_enqueue_style( 'combo-style', get_stylesheet_uri(), array( 'combo-fonts' ), $version );
+	// Polices auto-hébergées (woff2 dans le thème, @font-face dans style.css) : aucune requête tierce, rien de bloquant.
+	wp_enqueue_style( 'combo-style', get_stylesheet_uri(), array(), $version );
 	wp_enqueue_script( 'combo-main', get_template_directory_uri() . '/assets/js/main.js', array(), $version, array( 'in_footer' => true, 'strategy' => 'defer' ) );
 }
 add_action( 'wp_enqueue_scripts', 'combo_assets' );
