@@ -3,7 +3,7 @@ Theme Name: COMBO Epicerie Cuisine
 Theme URI: https://github.com/jonathanbize-boop/combo-epicerie-cuisine
 Author: Jonathan Bize
 Description: Theme sur mesure pour COMBO Epicerie - Cuisine (Le Poet-Laval). Design terracotta/olive, contenus editables via Apparence > Personnaliser, sans plugin.
-Version: 1.3.0
+Version: 1.3.1
 Requires at least: 6.3
 Requires PHP: 7.4
 License: Proprietaire
@@ -463,7 +463,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); font-weight: 400; }
 /* ---------- Breadcrumb ---------- */
 .breadcrumb { font-size: .9rem; margin-bottom: 1rem; }
 .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem; margin: 0; padding: 0; }
-.breadcrumb li + li::before { content: "â€º"; margin-right: .4rem; opacity: .7; }
+.breadcrumb li + li::before { content: "›"; margin-right: .4rem; opacity: .7; }
 .page-hero .breadcrumb a { color: var(--sand); }
 
 /* ---------- Animations d'apparition ---------- */
