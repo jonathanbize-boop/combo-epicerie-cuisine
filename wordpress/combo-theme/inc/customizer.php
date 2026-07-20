@@ -201,15 +201,62 @@ function combo_text( $key ) {
 	echo wp_kses_post( combo_get( $key ) );
 }
 
-/** URL d'une image modifiable (repli sur l'image du thème). */
-function combo_img_url( $key ) {
+/** URL brute d'une image modifiable (repli sur l'image du thème), sans échappement. */
+function combo_img_url_raw( $key ) {
 	$url = get_theme_mod( 'combo_' . $key, '' );
 	if ( ! $url ) {
 		$imgs = combo_default_images();
 		$file = isset( $imgs[ $key ] ) ? $imgs[ $key ] : 'logo-combo-epicerie-cuisine.png';
 		$url  = get_template_directory_uri() . '/assets/img/' . $file;
 	}
-	return esc_url( $url );
+	return $url;
+}
+
+/** URL d'une image modifiable (repli sur l'image du thème). */
+function combo_img_url( $key ) {
+	return esc_url( combo_img_url_raw( $key ) );
+}
+
+/**
+ * Renvoie l'URL WebP si un fichier .webp existe à côté de l'image, sinon ''.
+ * Fonctionne pour les images du thème comme pour celles téléversées (médiathèque).
+ */
+function combo_webp_url( $raw_url ) {
+	if ( ! preg_match( '/\.(jpe?g|png)$/i', $raw_url ) ) {
+		return '';
+	}
+	$webp_url  = preg_replace( '/\.(jpe?g|png)$/i', '.webp', $raw_url );
+	$theme_uri = get_template_directory_uri();
+	$uploads   = wp_get_upload_dir();
+	$path      = '';
+	if ( 0 === strpos( $webp_url, $theme_uri ) ) {
+		$path = get_template_directory() . substr( $webp_url, strlen( $theme_uri ) );
+	} elseif ( ! empty( $uploads['baseurl'] ) && 0 === strpos( $webp_url, $uploads['baseurl'] ) ) {
+		$path = $uploads['basedir'] . substr( $webp_url, strlen( $uploads['baseurl'] ) );
+	}
+	return ( $path && file_exists( $path ) ) ? $webp_url : '';
+}
+
+/**
+ * Affiche une image : <picture> avec source WebP + repli quand un WebP existe,
+ * sinon un simple <img>. $atts = attributs de la balise <img> (alt, class, loading…).
+ */
+function combo_img( $key, $atts = array() ) {
+	$raw  = combo_img_url_raw( $key );
+	$webp = combo_webp_url( $raw );
+	$attr = '';
+	foreach ( $atts as $k => $v ) {
+		if ( null === $v || false === $v ) {
+			continue;
+		}
+		$attr .= ' ' . $k . '="' . esc_attr( $v ) . '"';
+	}
+	$img = '<img src="' . esc_url( $raw ) . '"' . $attr . '>';
+	if ( $webp ) {
+		echo '<picture><source type="image/webp" srcset="' . esc_url( $webp ) . '">' . $img . '</picture>'; // phpcs:ignore WordPress.Security.EscapeOutput
+	} else {
+		echo $img; // phpcs:ignore WordPress.Security.EscapeOutput
+	}
 }
 
 /** Téléphone au format lien tel: (+33…). */

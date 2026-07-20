@@ -11,7 +11,7 @@ $captions = array( 'Bœuf mariné, herbes & riz safrané', 'Maquereau laqué, sa
 <main id="main">
 
 	<section class="page-hero">
-		<img class="page-hero__bg" src="<?php echo combo_img_url( 'cu_hero_img' ); ?>" alt="" loading="eager" fetchpriority="high">
+		<?php combo_img( 'cu_hero_img', array( 'class' => 'page-hero__bg', 'alt' => '', 'loading' => 'eager', 'fetchpriority' => 'high' ) ); ?>
 		<div class="container">
 			<nav class="breadcrumb" aria-label="Fil d'Ariane">
 				<ol>
@@ -35,7 +35,7 @@ $captions = array( 'Bœuf mariné, herbes & riz safrané', 'Maquereau laqué, sa
 	<section class="section section--paper" aria-labelledby="chef-title">
 		<div class="container split">
 			<div class="split__media reveal">
-				<img src="<?php echo combo_img_url( 'cu_chef_img' ); ?>" alt="Le chef de COMBO en pleine préparation au wok" loading="lazy">
+				<?php combo_img( 'cu_chef_img', array( 'alt' => 'Le chef de COMBO en pleine préparation au wok', 'loading' => 'lazy' ) ); ?>
 				<span class="sticker"><?php combo_text( 'cu_chef_sticker' ); ?></span>
 			</div>
 			<div class="reveal reveal-delay-1">
@@ -72,7 +72,7 @@ $captions = array( 'Bœuf mariné, herbes & riz safrané', 'Maquereau laqué, sa
 	<section class="section section--sand" aria-labelledby="bar-title">
 		<div class="container split split--reverse">
 			<div class="split__media reveal">
-				<img src="<?php echo combo_img_url( 'cu_bar_img' ); ?>" alt="Le bar de COMBO et son ardoise de boissons" loading="lazy">
+				<?php combo_img( 'cu_bar_img', array( 'alt' => 'Le bar de COMBO et son ardoise de boissons', 'loading' => 'lazy' ) ); ?>
 				<span class="sticker"><?php combo_text( 'cu_bar_sticker' ); ?></span>
 			</div>
 			<div class="reveal reveal-delay-1">
@@ -94,7 +94,7 @@ $captions = array( 'Bœuf mariné, herbes & riz safrané', 'Maquereau laqué, sa
 			<div class="mosaic reveal">
 				<?php for ( $i = 1; $i <= 6; $i++ ) : ?>
 				<figure<?php echo in_array( $i, array( 1, 4 ), true ) ? ' class="tall"' : ''; ?>>
-					<img src="<?php echo combo_img_url( 'cu_g' . $i ); ?>" alt="<?php echo esc_attr( $captions[ $i - 1 ] ); ?>" loading="lazy">
+					<?php combo_img( 'cu_g' . $i, array( 'alt' => $captions[ $i - 1 ], 'loading' => 'lazy' ) ); ?>
 					<figcaption><?php echo esc_html( $captions[ $i - 1 ] ); ?></figcaption>
 				</figure>
 				<?php endfor; ?>

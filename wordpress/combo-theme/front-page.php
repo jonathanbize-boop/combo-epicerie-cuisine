@@ -22,9 +22,9 @@ $co_url = combo_tpl_url( 'contact' );
 				</div>
 			</div>
 			<div class="hero__collage reveal reveal-delay-1">
-				<figure class="collage--1"><img src="<?php echo combo_img_url( 'home_img1' ); ?>" alt="Le chef de COMBO souriant, wok en main, devant le comptoir de l'épicerie" loading="eager" fetchpriority="high"></figure>
-				<figure class="collage--2"><img src="<?php echo combo_img_url( 'home_img2' ); ?>" alt="Plat fait maison servi à la cantine COMBO" loading="lazy"></figure>
-				<figure class="collage--3"><img src="<?php echo combo_img_url( 'home_img3' ); ?>" alt="Bouteilles de vin naturel de la cave COMBO" loading="lazy"></figure>
+				<figure class="collage--1"><?php combo_img( 'home_img1', array( 'alt' => "Le chef de COMBO souriant, wok en main, devant le comptoir de l'épicerie", 'loading' => 'eager', 'fetchpriority' => 'high' ) ); ?></figure>
+				<figure class="collage--2"><?php combo_img( 'home_img2', array( 'alt' => 'Plat fait maison servi à la cantine COMBO', 'loading' => 'lazy' ) ); ?></figure>
+				<figure class="collage--3"><?php combo_img( 'home_img3', array( 'alt' => 'Bouteilles de vin naturel de la cave COMBO', 'loading' => 'lazy' ) ); ?></figure>
 				<p class="hero__badge"><?php combo_text( 'home_badge' ); ?></p>
 			</div>
 		</div>
@@ -45,7 +45,7 @@ $co_url = combo_tpl_url( 'contact' );
 			</div>
 			<div class="universes">
 				<a class="universe reveal" href="<?php echo esc_url( $ep_url ); ?>">
-					<img class="universe__bg" src="<?php echo combo_img_url( 'uni1_img' ); ?>" alt="Rayons de l'épicerie COMBO" loading="lazy">
+					<?php combo_img( 'uni1_img', array( 'class' => 'universe__bg', 'alt' => "Rayons de l'épicerie COMBO", 'loading' => 'lazy' ) ); ?>
 					<div class="universe__body">
 						<span class="hand"><?php combo_text( 'uni1_hand' ); ?></span>
 						<h3><?php combo_text( 'uni1_title' ); ?></h3>
@@ -54,7 +54,7 @@ $co_url = combo_tpl_url( 'contact' );
 					</div>
 				</a>
 				<a class="universe reveal reveal-delay-1" href="<?php echo esc_url( $cu_url ); ?>">
-					<img class="universe__bg" src="<?php echo combo_img_url( 'uni2_img' ); ?>" alt="Plats préparés à la cantine COMBO" loading="lazy">
+					<?php combo_img( 'uni2_img', array( 'class' => 'universe__bg', 'alt' => 'Plats préparés à la cantine COMBO', 'loading' => 'lazy' ) ); ?>
 					<div class="universe__body">
 						<span class="hand"><?php combo_text( 'uni2_hand' ); ?></span>
 						<h3><?php combo_text( 'uni2_title' ); ?></h3>
@@ -87,7 +87,7 @@ $co_url = combo_tpl_url( 'contact' );
 	<section class="section section--sand" aria-labelledby="lieu-title">
 		<div class="container split">
 			<div class="split__media reveal">
-				<img src="<?php echo combo_img_url( 'lieu_img' ); ?>" alt="Ambiance chaleureuse au comptoir de COMBO" loading="lazy">
+				<?php combo_img( 'lieu_img', array( 'alt' => 'Ambiance chaleureuse au comptoir de COMBO', 'loading' => 'lazy' ) ); ?>
 				<span class="sticker"><?php combo_text( 'lieu_sticker' ); ?></span>
 			</div>
 			<div class="reveal reveal-delay-1">
@@ -155,7 +155,7 @@ $co_url = combo_tpl_url( 'contact' );
 			</div>
 			<div class="insta-strip reveal">
 				<?php for ( $i = 1; $i <= 6; $i++ ) : ?>
-				<a href="<?php echo esc_url( combo_get( 'instagram' ) ); ?>" rel="noopener" target="_blank" aria-label="Voir cette photo sur Instagram"><img src="<?php echo combo_img_url( 'insta_img' . $i ); ?>" alt="Photo de la vie de la boutique COMBO" loading="lazy"></a>
+				<a href="<?php echo esc_url( combo_get( 'instagram' ) ); ?>" rel="noopener" target="_blank" aria-label="Voir cette photo sur Instagram"><?php combo_img( 'insta_img' . $i, array( 'alt' => 'Photo de la vie de la boutique COMBO', 'loading' => 'lazy' ) ); ?></a>
 				<?php endfor; ?>
 			</div>
 		</div>

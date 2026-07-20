@@ -12,7 +12,7 @@ $captions = array( 'Les rayons épicerie', 'Bières & limonades artisanales', "C
 <main id="main">
 
 	<section class="page-hero">
-		<img class="page-hero__bg page-hero__bg--top" src="<?php echo combo_img_url( 'ep_hero_img' ); ?>" alt="" loading="eager" fetchpriority="high">
+		<?php combo_img( 'ep_hero_img', array( 'class' => 'page-hero__bg page-hero__bg--top', 'alt' => '', 'loading' => 'eager', 'fetchpriority' => 'high' ) ); ?>
 		<div class="container">
 			<nav class="breadcrumb" aria-label="Fil d'Ariane">
 				<ol>
@@ -42,7 +42,7 @@ $captions = array( 'Les rayons épicerie', 'Bières & limonades artisanales', "C
 				<p><?php combo_text( 'ep_intro_text' ); ?></p>
 			</div>
 			<div class="split__media reveal reveal-delay-1">
-				<img src="<?php echo combo_img_url( 'ep_intro_img' ); ?>" alt="Produits d'épicerie du monde avec ardoise explicative" loading="lazy">
+				<?php combo_img( 'ep_intro_img', array( 'alt' => "Produits d'épicerie du monde avec ardoise explicative", 'loading' => 'lazy' ) ); ?>
 				<span class="sticker"><?php combo_text( 'ep_intro_sticker' ); ?></span>
 			</div>
 		</div>
@@ -57,7 +57,7 @@ $captions = array( 'Les rayons épicerie', 'Bières & limonades artisanales', "C
 			<div class="cards">
 				<?php for ( $i = 1; $i <= 3; $i++ ) : ?>
 				<article class="card reveal<?php echo $i > 1 ? ' reveal-delay-' . ( $i - 1 ) : ''; ?>">
-					<div class="card__img"><img src="<?php echo combo_img_url( 'ep_c' . $i . '_img' ); ?>" alt="<?php echo esc_attr( wp_strip_all_tags( combo_get( 'ep_c' . $i . '_title' ) ) ); ?>" loading="lazy"></div>
+					<div class="card__img"><?php combo_img( 'ep_c' . $i . '_img', array( 'alt' => wp_strip_all_tags( combo_get( 'ep_c' . $i . '_title' ) ), 'loading' => 'lazy' ) ); ?></div>
 					<div class="card__body">
 						<span class="card__tag"><?php combo_text( 'ep_c' . $i . '_tag' ); ?></span>
 						<h3><?php combo_text( 'ep_c' . $i . '_title' ); ?></h3>
@@ -78,7 +78,7 @@ $captions = array( 'Les rayons épicerie', 'Bières & limonades artisanales', "C
 			<div class="mosaic reveal">
 				<?php for ( $i = 1; $i <= 6; $i++ ) : ?>
 				<figure<?php echo in_array( $i, array( 1, 4 ), true ) ? ' class="tall"' : ''; ?>>
-					<img src="<?php echo combo_img_url( 'ep_g' . $i ); ?>" alt="<?php echo esc_attr( $captions[ $i - 1 ] ); ?>" loading="lazy">
+					<?php combo_img( 'ep_g' . $i, array( 'alt' => $captions[ $i - 1 ], 'loading' => 'lazy' ) ); ?>
 					<figcaption><?php echo esc_html( $captions[ $i - 1 ] ); ?></figcaption>
 				</figure>
 				<?php endfor; ?>

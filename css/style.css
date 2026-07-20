@@ -48,6 +48,8 @@ body {
 }
 
 img { max-width: 100%; height: auto; display: block; }
+/* <picture> ne crée pas de boîte : l'<img> se comporte exactement comme sans enveloppe (WebP + repli JPEG). */
+picture { display: contents; }
 
 a { color: var(--terracotta); }
 a:focus-visible, button:focus-visible {
